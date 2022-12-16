@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm trá số nguyên tố</title>
+</head>
+<body>
+<script>
+    // let soLanInSNT = +prompt('Nhập so lan muon in: ')
+    // let count = 0;
+    // for (let snt = 2; count < soLanInSNT; snt++) {
+    //   let checkSNT = true;
+    //   for (let i = 2; i < snt; i++) {
+    //     if (snt % i == 0) {
+    //       checkSNT = false;
+    //       break;
+    //     }
+    //   }
+    //   if (checkSNT) {
+    //     count++;
+    //     document.write(snt + " <br> ")
+    //   }
+    // }
+    function snt(number) {
+        for (let i = 2; i <= number; i++) {
+            let check = false;
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    check = true;
+                }
+            }
+            if (!check) {
+                document.write(i + '   ')
+            }
+
+        }
+    }
+
+    snt(50)
+</script>
+</body>
+</html>

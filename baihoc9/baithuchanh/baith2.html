@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<div>
+    <h2>NHẬP ĐỘ F </h2><input type="number" onchange="temperaC(this.value)">
+    <p>ĐỘ C: <span id="outputC"></span></p>
+</div>
+<script>
+    function temperaC(val) {
+        val = parseFloat(val);
+        document.getElementById("outputC").innerHTML = (val - 32) * (5 / 9);
+    }
+
+</script>
+</body>
+</html>

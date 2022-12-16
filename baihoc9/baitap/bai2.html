@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi F và M</title>
+</head>
+<body>
+<p>Nhập Meters</p><input type="number" onchange="feetTo(this.value)"><br>
+<p>Nhập Feet</p><input type="number" onchange="metersTo(this.value)">
+<h3>Feet sang Meters: <span id="output"></span></h3>
+<h3>Meters sang Feet: <span id="output2"></span></h3>
+<script>
+function feetTo(feet) {
+    feet = parseFloat(feet);
+    document.getElementById('output').innerHTML= feet * 0.305;
+}
+function metersTo(mete) {
+    mete=parseFloat(mete);
+    document.getElementById('output2').innerHTML= mete * 3.279;
+
+}
+</script>
+</body>
+</html>

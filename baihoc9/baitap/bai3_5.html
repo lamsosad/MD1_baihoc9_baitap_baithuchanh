@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tên ngôi sao</title>
+</head>
+<body>
+<input type="text" id="search">
+<button onclick="show()">hiện</button>
+<h3>Nghĩa là: <span id="hien"></span></h3>
+<script>
+    let nameS = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let varS = ['Ursa Minor', 'Tarurus', 'Cygnus, Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function show() {
+        let check = false;
+        let j;
+        let search = document.getElementById('search').value;
+        for (let i = 0; i < nameS.length; i++) {
+            if (search.toLowerCase() == nameS[i].toLowerCase()) {
+                check = true;
+                j = i;
+                break;
+            }
+        }
+        if (check) {
+            document.getElementById('hien').innerHTML = varS[j];
+        } else {
+            document.getElementById('hien').innerHTML = 'Không có đâu bé ơi!!!   '
+        }
+
+    }
+</script>
+</body>
+</html>

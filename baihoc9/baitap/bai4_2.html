@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chu vi diện tích hình o</title>
+</head>
+<body style="text-align: center">
+<p>Nhập bán kính</p><input type="number" onchange="tinh(this.value)">
+<h4>Diện tích: <span id="output1"></span></h4>
+<h4>Chu vi: <span id="output2"></span></h4>
+<script>
+    function tinh(a) {
+        let pi = Math.PI
+        a = parseFloat(a)
+        document.getElementById('output1').innerHTML = a * a * pi;
+        document.getElementById('output2').innerHTML = a * 2 * pi;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên nhỏ nhât</title>
+</head>
+<body>
+<script>
+    function nhap() {
+        let a = +prompt('Nhập A');
+        let b = +prompt('Nhập B');
+        let c = +prompt('Nhập C');
+        // if (a > b && a > c) {
+        //     alert( a + ' là số lớn nhất');
+        //     if (b > c && b > a) {
+        //         alert( b + ' là số lớn nhất');
+        //     }
+        // } else {
+        //     alert( c + ' là số lớn nhất');
+        // }
+        let max = a;
+        if (max < b) {
+            max = b;
+            if (max < c) {
+                max = c;
+            }
+        } else if (max < c) {
+            max = c;
+        }
+        alert(max)
+    }
+
+    nhap()
+</script>
+</body>
+</html>
